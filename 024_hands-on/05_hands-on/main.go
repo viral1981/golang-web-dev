@@ -1,15 +1,15 @@
 package main
 
 import (
-"html/template"
-"log"
-"net/http"
+	"html/template"
+	"log"
+	"net/http"
 )
 
 var tpl *template.Template
 
 func init() {
-	tpl = template.Must(template.ParseFiles("templates/index.gohtml"))
+	tpl = template.Must(template.ParseFiles("starting-files/templates/index.gohtml"))
 }
 
 func main() {
