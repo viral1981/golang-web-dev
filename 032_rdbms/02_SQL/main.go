@@ -12,7 +12,7 @@ var db *sql.DB
 var err error
 
 func main() {
-	db, err = sql.Open("mysql", "awsuser:mypassword@tcp(mydbinstance.cakwl95bxza0.us-west-1.rds.amazonaws.com:3306)/test02?charset=utf8")
+	db, err = sql.Open("mysql", "vpadmin@vp-mysql:T00goodtobetrue@tcp(vp-mysql.mysql.database.azure.com:3306)/test02?charset=utf8")
 	check(err)
 	defer db.Close()
 
