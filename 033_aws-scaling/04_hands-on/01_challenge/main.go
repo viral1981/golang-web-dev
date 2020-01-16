@@ -24,7 +24,7 @@ func main() {
 	http.HandleFunc("/amigos", amigos)
 	http.HandleFunc("/instance", instance)
 	http.Handle("/favicon.ico", http.NotFoundHandler())
-	err := http.ListenAndServe(":8080", nil)
+	err := http.ListenAndServe(":80", nil)
 	check(err)
 }
 
