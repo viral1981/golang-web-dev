@@ -7,6 +7,9 @@
 <body>
 
 Hello from index
-<h1>Cookie Value: {{.}}</h1>
+<h1>Cookie Value:</h1>
+{{range .}}
+<h2>{{.}}</h2>
+{{end}}
 </body>
 </html>
