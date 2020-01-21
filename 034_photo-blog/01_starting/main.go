@@ -20,6 +20,8 @@ func init() {
 
 func main() {
 	http.HandleFunc("/", index)
+	// add route to server pictures
+	http.Handle("/public", http.StripPrefix("/public", http.FileServer(http.Dir("./public"))))
 	http.Handle("/favicon.ico", http.NotFoundHandler())
 	http.ListenAndServe(":8080", nil)
 }
@@ -74,7 +76,6 @@ func getCookie(w http.ResponseWriter, req *http.Request) *http.Cookie {
 }
 
 func appendValue(w http.ResponseWriter, c *http.Cookie, fname string) *http.Cookie {
-
 
 	s := c.Value
 	if !strings.Contains(s, fname) {
