@@ -1,14 +1,14 @@
 package main
 
 type code struct {
-	Code string `json: "Code"`
+	Code    string `json: "Code"`
 	Descrip string `json: Descrip`
 }
 
-type codes [] code
+type codes []code
 
 func main() {
-	var data codes
+	//var data codes
 
-	rcvd :=
+	//rcvd :=
 }
