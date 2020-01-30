@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/viral1981/golang-web-dev/tree/master/042_mongodb/06_hands-on/starting-code/models"
+	"github.com/viral1981/golang-web-dev/042_mongodb/06_hands-on/starting-code/models"
 	"github.com/julienschmidt/httprouter"
 	"github.com/satori/go.uuid"
 	"net/http"
