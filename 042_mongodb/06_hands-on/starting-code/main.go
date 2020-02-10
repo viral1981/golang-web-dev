@@ -1,10 +1,10 @@
 package main
 
 import (
-	"github.com/julienschmidt/httprouter"
-	"github.com/viral1981/golang-web-dev/042_mongodb/06_hands-on/starting-code/controllers"
-	"github.com/viral1981/golang-web-dev/042_mongodb/06_hands-on/starting-code/models"
+	"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/controllers"
+	"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/models"
 	"net/http"
+	"github.com/julienschmidt/httprouter"
 )
 
 func main() {

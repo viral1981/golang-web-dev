@@ -3,7 +3,7 @@ package controllers
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/viral1981/golang-web-dev/042_mongodb/06_hands-on/starting-code/models"
+	"github.com/GoesToEleven/golang-web-dev/042_mongodb/07_solution/models"
 	"github.com/julienschmidt/httprouter"
 	"github.com/satori/go.uuid"
 	"net/http"
@@ -21,7 +21,7 @@ func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httpr
 	// Grab id
 	id := p.ByName("id")
 
-	//Retrieve User
+	// Retrieve user
 	u := uc.session[id]
 
 	uj, err := json.Marshal(u)
@@ -30,8 +30,8 @@ func (uc UserController) GetUser(w http.ResponseWriter, r *http.Request, p httpr
 	}
 
 	w.Header().Set("Content-Type", "application/json")
-	w.WriteHeader(http.StatusOK) //200
-	fmt.Fprintf(w,"%s\n", uj)
+	w.WriteHeader(http.StatusOK) // 200
+	fmt.Fprintf(w, "%s\n", uj)
 }
 
 func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ httprouter.Params) {
@@ -39,7 +39,7 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ ht
 
 	json.NewDecoder(r.Body).Decode(&u)
 
-	// create bson ID
+	// create ID
 	u.Id = uuid.NewV4().String()
 
 	// store the user
@@ -58,7 +58,7 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request, _ ht
 func (uc UserController) DeleteUser(w http.ResponseWriter, r *http.Request, p httprouter.Params) {
 	id := p.ByName("id")
 
-	delete(uc.session,id)
+	delete(uc.session, id)
 
 	w.WriteHeader(http.StatusOK) // 200
 	fmt.Fprint(w, "Deleted user", id, "\n")
