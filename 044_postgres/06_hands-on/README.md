@@ -13,3 +13,15 @@
   6 | McLeod |    26 |  72000
   7 | James  |    32 |  35000
 ```
+
+CREATE TABLE employees (
+   ID SERIAL PRIMARY KEY,
+   NAME           TEXT    NOT NULL,
+   SCORE          INT DEFAULT 10,
+   SALARY         REAL
+   
+  );
+  
+INSERT INTO employees (NAME,SCORE,SALARY) VALUES ('Daniel',23,55000),('Arin',25,65000),('Juan',24,72000);
+INSERT INTO employees (NAME,SCORE,SALARY) VALUES ('Shen',26,64000),('Myke',27,58000),('McLeod',26,72000),('James',32,35000);
+(4, 'Jasmine', 5, '983 Star Ave., Brooklyn, NY, 00912 ', 55700.00, '1997-12-13' ), (5, 'Orranda', 9, '745 Hammer Lane, Hammerfield, Texas, 75839', 65350.00 , '1992-12-13');
